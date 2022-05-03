@@ -78,10 +78,10 @@ This script helps me in training conversations models and extracting weights so 
 
 ### 3) [train_chatbot.ipynb](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Conversation/train_chatbot.ipynb)
 Here I use last step to train models and build 5 models:
-- eg_model: this is for Egyption data.
-- gu_model: this is for Gulf data.
-- le_model: this is for Levantine data.
-- mg_model: this is for Magharbi data.
-- th_model: this is for Classical Arabic data.
+- `eg_model:` this is for Egyption data.
+- `gu_model:` this is for Gulf data.
+- `le_model:` this is for Levantine data.
+- `mg_model:` this is for Magharbi data.
+- `th_model:` this is for Classical Arabic data.
 
 ## [Deployment](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Deploy)
