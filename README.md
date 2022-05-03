@@ -1,6 +1,7 @@
 # Arabic-Dialect-Chatbot-AI-Task
 This is a chatbot that can reply to you in five dialect (Egyptian, Magharbi, gulf, Levantine, Classical Arabic).
 ________________________
+## 1) [Detect dialect](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect)
 I have `dialect_dataset.csv` that include 2 columns (ids and dialect) and [API](https://recruitment.aimtechnologies.co/ai-tasks) to fetch texts from it.
 There are 4 steps as mentioned below.<br>
 ### 1) [Data fetching notebook from API](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/collect%20data.ipynb)
@@ -19,7 +20,7 @@ Because of these conditions we have data with 458197 rows so we worked in these 
   - See if we have missing data we don't fetch.
   - Save data as `collected_data.csv`
 
-### 2) [Data pre-processing notebook](https://github.com/AntoniosMalak/arabic-dialect/blob/main/data_pre-processing.ipynb)
+### 2) [Data pre-processing notebook](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/pre-processing%20data.ipynb)
 - I worked in the same way as mentioned in [`Aim Technologies blog`](https://aimtechnologies.co/arabic-sentiment-analysis-blog.html?fbclid=IwAR0hlfhCOqd2xpJ3sGUb8yJbN0MzMq4dPPe6swuXwtdbCx1Mrn2I2wei3AM) to prepossessing Arabic texts and add another prepossessing text. <br>
     - `Normalizing similar characters` for example: (أ,إ,ا) should all be (ا). <br>
     - `Removing tashkeel` for example (“وَصيَّة”) should be (“وصية”). <br>
@@ -33,17 +34,16 @@ Because of these conditions we have data with 458197 rows so we worked in these 
 - Collect prepossessing texts in processed_text column in new data include columns (ids, text, dialect, processed_text)
 - Save data as `processed_data.csv`
 
-### 3) [Model Training notebook](https://github.com/AntoniosMalak/arabic-dialect/blob/main/model_training.ipynb)
+### 3) [Model Training notebook](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/model_training.ipynb)
 Here we built classification models and Deep learning model.
 - classification models:
   - Load data and split it and build methods that can help.
-    - **text_fit_predict_without_imbalanced** method to predict more than feature_extraction techniques(CountVectorizer, TfidfVectorizer) with original data.
-    - **text_fit_predict_with_imbalanced** method to predict more than techniques with resample techniques (RandomOverSampler, SMOTE) because dialect column are different, the biggest one is EG with 57636 rows and the lowest one is TN with 9246 rows.
-  - Trained a lot of classification models but it's so bad so I saw Logistic Regression is the best one and I worked with.
+    - **text_fit_predict** method to predict more than feature_extraction techniques(CountVectorizer, TfidfVectorizer) with original data.
+  - Trained a lot of classification models but it's so bad so I saw Logistic Regression with solver sag is the best choice and I worked with.
   - At last, I chooesed the best model and tried to imporve it with GridSearchCV with cv = 5.
 - Deep Learning model:
-  - Built tokenizer with MAX_NB_WORDS = 50000 and MAX_SEQUENCE_LENGTH = 150
-  - Built model with 4 layers Embedding, SpatialDropout1D, LSTM, Dense and used epochs = 5, batch_size = 64
+  - Built tokenizer with MAX_NB_WORDS = 50000 and MAX_SEQUENCE_LENGTH = 30
+  - Built model with 4 layers Embedding, SpatialDropout1D, LSTM, Dense and used epochs = 20, batch_size = 64, and earlystopping with patience = 5
 - At last, Save models, tokenizer and tfidf to use it in develop section.
 
 ### 4) [Deployment script](https://github.com/AntoniosMalak/arabic-dialect/tree/main/Deploy)
