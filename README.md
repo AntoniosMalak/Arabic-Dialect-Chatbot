@@ -1,11 +1,11 @@
 # Arabic-Dialect-Chatbot-AI-Task
 This is a chatbot that can reply to you in five dialect (Egyptian, Magharbi, gulf, Levantine, Classical Arabic).
 Ypu will find three folders:
-- [Detect Dialect]()
+- [Detect Dialect](1)
 - [Conversation]()
 - [Deploy]()
 ________________________
-## [Detect dialect](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect)
+## (1)[Detect dialect](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect)
 I have `dialect_dataset.csv` that include 2 columns (ids and dialect) and [API](/https://recruitment.aimtechnologies.co/ai-tasks) to fetch texts from it.
 There are 4 steps as mentioned below.<br>
 ### 1) [Data fetching notebook from API](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/data_fetching.ipynb)
