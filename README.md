@@ -1,12 +1,9 @@
 # Arabic-Dialect-Chatbot-AI-Task
 This is a chatbot that can reply to you in five dialect (Egyptian, Magharbi, gulf, Levantine, Classical Arabic).
-_____
-# arabic-dialect
-## This project to calssify 18 arabic dialect.
 ________________________
 I have `dialect_dataset.csv` that include 2 columns (ids and dialect) and [API](https://recruitment.aimtechnologies.co/ai-tasks) to fetch texts from it.
 There are 4 steps as mentioned below.<br>
-### 1) [Data fetching notebook from API](https://github.com/AntoniosMalak/arabic-dialect/blob/main/data_fetching.ipynb)
+### 1) [Data fetching notebook from API](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/collect%20data.ipynb)
 - First condition: The request body must be a JSON as a list of strings, and the size of the list must NOT
 exceed 1000
 - Second condition: The API will return a dictionary where the keys are the ids, and the values are the text, here
