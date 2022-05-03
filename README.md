@@ -1,10 +1,14 @@
 # Arabic-Dialect-Chatbot-AI-Task
 This is a chatbot that can reply to you in five dialect (Egyptian, Magharbi, gulf, Levantine, Classical Arabic).
+Ypu will find three folders:
+- [Detect Dialect]()
+- [Conversation]()
+- [Deploy]()
 ________________________
-## [Detect dialect](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect)
-I have `dialect_dataset.csv` that include 2 columns (ids and dialect) and [API](https://recruitment.aimtechnologies.co/ai-tasks) to fetch texts from it.
+## [Detect dialect](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect)
+I have `dialect_dataset.csv` that include 2 columns (ids and dialect) and [API](/https://recruitment.aimtechnologies.co/ai-tasks) to fetch texts from it.
 There are 4 steps as mentioned below.<br>
-### 1) [Data fetching notebook from API](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/data_fetching.ipynb)
+### 1) [Data fetching notebook from API](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/data_fetching.ipynb)
 - First condition: The request body must be a JSON as a list of strings, and the size of the list must NOT
 exceed 1000
 - Second condition: The API will return a dictionary where the keys are the ids, and the values are the text, here
@@ -18,10 +22,10 @@ Because of these conditions I have data with 458197 rows so I worked in these st
   - Make a request for 2 lists to fetch all texts.
   - Collect ids and texts into DataFrame.
   - See if I have missing data I don't fetch.
-  - Save data as [`collected_data.csv`](https://drive.google.com/file/d/15ZB6a0kQeKS4Se1CAcqogsFt0TaJ5q10/view?usp=sharing)
+  - Save data as [`collected_data.csv`](/https://drive.google.com/file/d/15ZB6a0kQeKS4Se1CAcqogsFt0TaJ5q10/view?usp=sharing)
 
-### 2) [Data pre-processing notebook](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/pre-processing%20data.ipynb)
-- I worked in the same way as mentioned in [`Aim Technologies blog`](https://aimtechnologies.co/arabic-sentiment-analysis-blog.html?fbclid=IwAR0hlfhCOqd2xpJ3sGUb8yJbN0MzMq4dPPe6swuXwtdbCx1Mrn2I2wei3AM) to prepossessing Arabic texts and add another prepossessing text. <br>
+### 2) [Data pre-processing notebook](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/pre-processing%20data.ipynb)
+- I worked in the same way as mentioned in [`Aim Technologies blog`](/https://aimtechnologies.co/arabic-sentiment-analysis-blog.html?fbclid=IwAR0hlfhCOqd2xpJ3sGUb8yJbN0MzMq4dPPe6swuXwtdbCx1Mrn2I2wei3AM) to prepossessing Arabic texts and add another prepossessing text. <br>
     - `Normalizing similar characters` for example: (أ,إ,ا) should all be (ا). <br>
     - `Removing tashkeel` for example (“وَصيَّة”) should be (“وصية”). <br>
     - `Normalizing mentions and links to a standard form` for example: (@vodafone سعر الباقة كام؟) should be (XmentionX سعر الباقة كام؟).<br>
@@ -32,9 +36,9 @@ Because of these conditions I have data with 458197 rows so I worked in these st
     - `Remove punctuation` for example: (“انت بتعمل ايه ؟!.”) should be (“انت بتعمل ايه”).<br>
 
 - Collect prepossessing texts in processed_text column in new data include columns (ids, text, dialect, processed_text)
-- Save data as [`processed_data.csv`](https://drive.google.com/file/d/1PWEN8YwApU7PfnZv88-_UIxXH-kcVtyh/view?usp=sharing)
+- Save data as [`processed_data.csv`](/https://drive.google.com/file/d/1PWEN8YwApU7PfnZv88-_UIxXH-kcVtyh/view?usp=sharing)
 
-### 3) [Model Training notebook](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/model_training.ipynb)
+### 3) [Model Training notebook](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/model_training.ipynb)
 Here I built classification models and Deep learning model.
 - classification models:
   - Load data and split it and build methods that can help.
@@ -44,13 +48,13 @@ Here I built classification models and Deep learning model.
 - Deep Learning model:
   - Built tokenizer with MAX_NB_WORDS = 50000 and MAX_SEQUENCE_LENGTH = 30
   - Built model with 4 layers Embedding, SpatialDropout1D, LSTM, Dense and used epochs = 20, batch_size = 64, earlystopping with patience = 5
-- At last, Save models, tokenizer and tfidf to use it in develop section [here](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect/Models).
+- At last, Save models, tokenizer and tfidf to use it in develop section [here](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect/Models).
 
 
-## [Conversation](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Conversation)
+## [Conversation](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Conversation)
 Here I built models that I can use in the chatbot to reply to the student.
 
-### 1) [Write data](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Conversation/data)
+### 1) [Write data](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Conversation/data)
 We decided to use this chatbot to help students in the AI course so we make data manually. We have 5 data you can see them for the link above.
 There are 5 data:
 - Arabic_data.json
@@ -60,7 +64,7 @@ There are 5 data:
 - MG_data.json
 All about who is prof, Ta, and material of course.
 
-### 2) [Helper script](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Conversation/utlis.py)
+### 2) [Helper script](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Conversation/utlis.py)
 This script helps me in training conversations models and extracting weights so these are methods you will find in it:
 - `get_weight:` this method takes the data file I want to extract weights from. It returns:
   - **words:** The number of words I have in data, I used WordNetLemmatizer.
@@ -72,7 +76,7 @@ This script helps me in training conversations models and extracting weights so 
   - Dense with 64 units.
   - Dense with len(train_y) units.
 
-### 3) [train_chatbot.ipynb](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Conversation/train_chatbot.ipynb)
+### 3) [train_chatbot.ipynb](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Conversation/train_chatbot.ipynb)
 Here I use last step to train models and build 5 models:
 - eg_model: this is for Egyption data.
 - gu_model: this is for Gulf data.
