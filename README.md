@@ -89,7 +89,7 @@ Here I use last step to train models and build 5 models:
 It contains two folders and one script:
 - `templates folder:` contains html file that I will use.
 - `static folder:` contains styles (css files) and javascript files.
-- `app:` This is script I used to deploy models and release  chatbot.
+- `app.py:` This is script I used to deploy models and release  chatbot.
 
 ## Run_app
 - run [app.py](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Deploy/app.py)
