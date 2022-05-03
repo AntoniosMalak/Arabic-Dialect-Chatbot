@@ -9,15 +9,15 @@ There are 4 steps as mentioned below.<br>
 exceed 1000
 - Second condition: The API will return a dictionary where the keys are the ids, and the values are the text, here
 is a request and response.<br>
-Because of these conditions we have data with 458197 rows so we worked in these steps........
+Because of these conditions I have data with 458197 rows so I worked in these steps........
   - Collect ids astype string in a list.
   - Split ids into two lists.
-    - list_1000 => this is a list with length 485 of lists every list on it with length 1000 here we collect (485000).
+    - list_1000 => this is a list with length 485 of lists every list on it with length 1000 here I collect (485000).
     - list_197  => this is a single list with length 197.
-    at last, we make 2 lists contain all ids.
+    at last, I make 2 lists contain all ids.
   - Make a request for 2 lists to fetch all texts.
   - Collect ids and texts into DataFrame.
-  - See if we have missing data we don't fetch.
+  - See if I have missing data I don't fetch.
   - Save data as [`collected_data.csv`](https://drive.google.com/file/d/15ZB6a0kQeKS4Se1CAcqogsFt0TaJ5q10/view?usp=sharing)
 
 ### 2) [Data pre-processing notebook](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/pre-processing%20data.ipynb)
@@ -35,7 +35,7 @@ Because of these conditions we have data with 458197 rows so we worked in these 
 - Save data as [`processed_data.csv`](https://drive.google.com/file/d/1PWEN8YwApU7PfnZv88-_UIxXH-kcVtyh/view?usp=sharing)
 
 ### 3) [Model Training notebook](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/model_training.ipynb)
-Here we built classification models and Deep learning model.
+Here I built classification models and Deep learning model.
 - classification models:
   - Load data and split it and build methods that can help.
     - **text_fit_predict** method to predict more than feature_extraction techniques(CountVectorizer, TfidfVectorizer) with original data.
