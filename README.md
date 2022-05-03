@@ -5,6 +5,7 @@ Ypu will find three folders:
 - [Conversation](#Conversation)
 - [Local Deploy](#Deployment)
 - [How to run](#Run_app)
+- [Examples](#Examples)
 ________________________
 ## [Detect_dialect](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect)
 I have `dialect_dataset.csv` that include 2 columns (ids and dialect) and [API](/https://recruitment.aimtechnologies.co/ai-tasks) to fetch texts from it.
@@ -95,6 +96,12 @@ It contains two folders and one script:
 - run [app.py](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Deploy/app.py)
 - Open chrome or edge....etc and write `http://127.0.0.1:(your port)/` like this `http://127.0.0.1:5000/`
 - Use chatbot.
+
+## Examples
+![Screenshot 2022-05-03 154653](https://user-images.githubusercontent.com/57007944/166465534-035b1fcd-e18a-444c-87bf-d6408e175d76.jpg)
+
+![Screenshot 2022-05-03 154919](https://user-images.githubusercontent.com/57007944/166465627-ab79ad58-1cd5-4217-8114-e2996e13208c.jpg)
+
 
 Participants: 
 (Antonios Malak, Amir Hany)
