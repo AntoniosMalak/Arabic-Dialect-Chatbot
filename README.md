@@ -93,7 +93,7 @@ It contains two folders and one script:
 
 ## Run_app
 - run [app.py](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Deploy/app.py)
-- Open chrome or edge....etc and write http://127.0.0.1:(your port)/ like this http://127.0.0.1:5000/
+- Open chrome or edge....etc and write `http://127.0.0.1:(your port)/` like this `http://127.0.0.1:5000/`
 - Use chatbot.
 
 Participants: (Antonios Malak, Amir Hany)
