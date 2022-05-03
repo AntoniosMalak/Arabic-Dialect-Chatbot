@@ -96,5 +96,8 @@ It contains two folders and one script:
 - Open chrome or edge....etc and write `http://127.0.0.1:(your port)/` like this `http://127.0.0.1:5000/`
 - Use chatbot.
 
-Participants: (Antonios Malak, Amir Hany)
+Participants: 
+(Antonios Malak, Amir Hany)
+
+
 Thanks for reading.
