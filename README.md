@@ -44,6 +44,39 @@ Here I built classification models and Deep learning model.
 - Deep Learning model:
   - Built tokenizer with MAX_NB_WORDS = 50000 and MAX_SEQUENCE_LENGTH = 30
   - Built model with 4 layers Embedding, SpatialDropout1D, LSTM, Dense and used epochs = 20, batch_size = 64, earlystopping with patience = 5
-- At last, Save models, tokenizer and tfidf to use it in develop section [here](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect/Models)
+- At last, Save models, tokenizer and tfidf to use it in develop section [here](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect/Models).
 
+
+## [Conversation](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Conversation)
+Here I built models that I can use in the chatbot to reply to the student.
+
+### 1) [Write data](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Conversation/data)
+We decided to use this chatbot to help students in the AI course so we make data manually. We have 5 data you can see them for the link above.
+There are 5 data:
+- Arabic_data.json
+- EG_data.json
+- GU_data.json
+- LE_data.json
+- MG_data.json
+All about who is prof, Ta, and material of course.
+
+### 2) [Helper script](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Conversation/utlis.py)
+This script helps me in training conversations models and extracting weights so these are methods you will find in it:
+- `get_weight:` this method takes the data file I want to extract weights from. It returns:
+  - **words:** The number of words I have in data, I used WordNetLemmatizer.
+  - **classes:** That contains tags which are the same in each data.
+  - **documents:** This is contain a tokenizer for every word.
+- `get_train_data:` This method take words, classes, and documents and returns train_x, train_y that I can train models.
+- `train_model:` Here I train models (deep learning model) that have 3 layers:
+  - Dense with 128 units.
+  - Dense with 64 units.
+  - Dense with len(train_y) units.
+
+### 3) [train_chatbot.ipynb](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Conversation/train_chatbot.ipynb)
+Here I use last step to train models and build 5 models:
+- eg_model: this is for Egyption data.
+- gu_model: this is for Gulf data.
+- le_model: this is for Levantine data.
+- mg_model: this is for Magharbi data.
+- th_model: this is for Classical Arabic data.
 
