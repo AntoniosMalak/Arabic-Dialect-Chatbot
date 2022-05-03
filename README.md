@@ -3,7 +3,8 @@ This is a chatbot that can reply to you in five dialect (Egyptian, Magharbi, gul
 Ypu will find three folders:
 - [Detect Dialect](#Detect_dialect)
 - [Conversation](#Conversation)
-- [Deploy](#Deployment)
+- [Local Deploy](#Deployment)
+- [How to run](#Run_app)
 ________________________
 ## [Detect_dialect](/https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect)
 I have `dialect_dataset.csv` that include 2 columns (ids and dialect) and [API](/https://recruitment.aimtechnologies.co/ai-tasks) to fetch texts from it.
@@ -90,4 +91,10 @@ It contains two folders and one script:
 - `static folder:` contains styles (css files) and javascript files.
 - `app:` This is script I used to deploy models and release  chatbot.
 
+## Run_app
+- run [app.py](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Deploy/app.py)
+- Open chrome or edge....etc and write http://127.0.0.1:(your port)/ like this http://127.0.0.1:5000/
+- Use chatbot.
 
+Participants: (Antonios Malak, Amir Hany)
+Thanks for reading.
