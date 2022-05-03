@@ -85,3 +85,9 @@ Here I use last step to train models and build 5 models:
 - `th_model:` this is for Classical Arabic data.
 
 ## [Deployment](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Deploy)
+It contains two folders and one script:
+- `templates folder:` contains html file that I will use.
+- `static folder:` contains styles (css files) and javascript files.
+- `app:` This is script I used to deploy models and release  chatbot.
+
+
