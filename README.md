@@ -44,6 +44,6 @@ Here I built classification models and Deep learning model.
 - Deep Learning model:
   - Built tokenizer with MAX_NB_WORDS = 50000 and MAX_SEQUENCE_LENGTH = 30
   - Built model with 4 layers Embedding, SpatialDropout1D, LSTM, Dense and used epochs = 20, batch_size = 64, earlystopping with patience = 5
-- At last, Save models, tokenizer and tfidf to use it in develop section.
+- At last, Save models, tokenizer and tfidf to use it in develop section [here](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/tree/main/Detect%20Dialect/Models)
 
 
