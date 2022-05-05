@@ -81,7 +81,7 @@ This script helps me in training conversations models and extracting weights so 
   - Dense with 64 units.
   - Dense with len(train_y) units.
 
-### 3) [train_chatbot.ipynb](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Conversation/train_chatbot.ipynb)
+### 3) [train chatbot](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Conversation/train_chatbot.ipynb)
 Here I use last step to train models and build 5 models:
 - `eg_model:` this is for Egyption data.
 - `gu_model:` this is for Gulf data.
