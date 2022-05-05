@@ -41,7 +41,7 @@ Because of these conditions I have data with 458197 rows so I worked in these st
 - Collect prepossessing texts in processed_text column in new data include columns (ids, text, dialect, processed_text)
 - Save data as [`processed_data.csv`](https://drive.google.com/file/d/1PWEN8YwApU7PfnZv88-_UIxXH-kcVtyh/view?usp=sharing)
 
-### 3) [Model Training notebook](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/model_training.ipynb)
+### 3) [Model Training](https://github.com/AntoniosMalak/Arabic-Dialect-Chatbot-AI-Task/blob/main/Detect%20Dialect/model_training.ipynb)
 Here I built classification models and Deep learning model.
 - classification models:
   - Load data and split it and build methods that can help.
