@@ -1,6 +1,6 @@
 # Arabic-Dialect-Chatbot-AI-Task
 This is a chatbot that can reply to you in five dialect (Egyptian, Magharbi, gulf, Levantine, Classical Arabic).
-Ypu will find three folders:
+You will find three folders:
 - [Detect Dialect](#Detect_dialect)
 - [Conversation](#Conversation)
 - [Local Deploy](#Deployment)
