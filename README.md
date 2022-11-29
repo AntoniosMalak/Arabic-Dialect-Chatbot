@@ -106,8 +106,4 @@ It contains two folders and one script:
 ![Screenshot 2022-05-03 154919](https://user-images.githubusercontent.com/57007944/166465627-ab79ad58-1cd5-4217-8114-e2996e13208c.jpg)
 
 
-Participants: 
-(Antonios Malak, Amir Hany)
-
-
 Thanks for reading.
